@@ -4,7 +4,6 @@ const PORT = 3000
 const drinks = require("./models/drinks.js")
 const food = require("./models/food.js")
 
-// app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req,res)=>{
     res.render("home.ejs")
@@ -31,11 +30,6 @@ app.get("/food/:id", (req,res)=>{
     res.render('food_show.ejs', {
         item:food[req.params.id]})
 })
-
-
-
-
-
 
 
 app.listen(PORT, ()=>{
