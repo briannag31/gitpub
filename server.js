@@ -2,11 +2,12 @@ const express = require("express")
 const app = express()
 const PORT = 3000
 const drinks = require("./models/drinks.js")
+const food = require("./models/food.js")
 
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req,res)=>{
-    res.send('welcome to the Gitpub app')
+    res.render("home.ejs")
 })
 
 app.get("/drinks/", (req,res)=>{
@@ -20,7 +21,16 @@ app.get("/drinks/:id", (req,res)=>{
         drink:drinks[req.params.id]})
 })
 
+app.get("/food/", (req,res)=>{
+    res.render('food_index.ejs', {
+        allFood: food
+    })
+})
 
+app.get("/food/:id", (req,res)=>{
+    res.render('food_show.ejs', {
+        item:food[req.params.id]})
+})
 
 
 

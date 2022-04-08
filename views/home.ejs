@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drinks</title>
+    <title>GitPub</title>
 </head>
 <body>
     <style type="text/css">
@@ -14,26 +14,13 @@
         }
         a{
             color: blanchedalmond;
-            font-size: 20px; 
+            font-size: 20px;  
         }
-
-        li::first-letter{ text-transform:capitalize;}
-
-    
-        
       </style>
 
-    <h1>Welcome to GitPub - Drinks Menu</h1>
-
-    <ul>
-        <% for (let drink in allDrinks){%>
-        <li>
-            <a href="/drinks/<%= drink %>"><%= allDrinks[drink].name%></a>
-           <% } %> 
-        </li>
-    </ul>
- <a href="/"> Return Home </a>
-
-
+    <h1>Welcome to GitPub</h1>
+    <h3>Which menu would you like to see:</h3>
+     <a href="/drinks/"> Drinks </a> <br>
+     <a href="/food/"> Food </a>
 </body>
 </html>
