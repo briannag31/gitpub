@@ -12,8 +12,25 @@
           color: blanchedalmond;
           background-color: steelblue;
         }
+        li::first-letter{ text-transform:capitalize;
+        }
+        
       </style>
-      
+
     <h1>Welcome to GitPub</h1>
+
+    <ul>
+        <% for (let drink in allDrinks){%>
+        <li>
+            <a href="/drinks/<%= drink %>"><%= allDrinks[drink].name%></a>
+           <% } %> 
+           
+        
+
+        </li>
+    </ul>
+
+
+
 </body>
 </html>
