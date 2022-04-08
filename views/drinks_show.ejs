@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitPub App</title>
+    <title>GitPub</title>
 </head>
 <body>
-    <h1></h1>
+    <style type="text/css">
+        body {
+          color: blanchedalmond;
+          background-color: steelblue;
+        }
+        h2::first-letter{ text-transform:capitalize;
+        }
+        img{
+            height: 30vh;
+            padding-bottom: 20px;
+        }
+        
+      </style>
+
+    <h1>At Foo Bar</h1>
+    <h2><%= drink.name %>  </h2>
+    <h3>$<%= drink.price %> </h3>
+    <img src="<%= drink.image %>.png"> <br>
+    <a href="/drinks">Back to Drink List</a>
 </body>
 </html>
